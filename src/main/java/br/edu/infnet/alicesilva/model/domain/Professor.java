@@ -8,7 +8,13 @@ public class Professor {
 	private boolean mestre;
 	
 	public float calcularSalario(){
-		return salario + (mestre ? 1000: 500);
+		float salarioTotal = salario + (mestre ? 1250: 750);
+
+		return salarioTotal = indicativoGratificacao() ? salarioTotal + 1000 : salarioTotal;
+	}
+	
+	public boolean indicativoGratificacao() {
+		return salario >= 5000 && mestre;
 	}
 	
 	public int getRegistro() {
